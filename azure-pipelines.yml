@@ -39,7 +39,7 @@ stages:
           inputs:
             script: |
               git add -A
-              git commit -m "update"
+              git commit -m "update [skip ci]"
               git push origin master
             workingDirectory: '$(Build.SourcesDirectory)'
 
