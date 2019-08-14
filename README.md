@@ -1,7 +1,7 @@
 Project outline
 ========================
 
-This project use FsLab template to document various topics related to quantitative finance with a focus on commodities markets. The resulting website avaialbe here: https://xqguo.github.io
+This project use FsLab template to document various topics related to quantitative finance with a focus on commodities markets.
 
 Programming setup
 ----------
