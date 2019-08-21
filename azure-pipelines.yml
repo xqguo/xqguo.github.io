@@ -32,17 +32,11 @@ stages:
           inputs:
             PaketPath: '.paket'
         - script: .\build.cmd html                 
-        - task: CopyFiles@2
-          inputs:
-            SourceFolder: '$(Build.SourcesDirectory)/src/output'
-            Contents: '**'
-            TargetFolder: '$(Build.SourcesDirectory)'
-            OverWrite: true
         - task: CmdLine@2
           inputs:
             script: |
               git add -A
-              git commit -m "update [skip ci]"
+              git commit -m "generate site[skip ci]"
               git push origin master
             workingDirectory: '$(Build.SourcesDirectory)'
 
