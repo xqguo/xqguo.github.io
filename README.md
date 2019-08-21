@@ -3,6 +3,11 @@ Project outline
 
 This project use FsLab template to document various topics related to quantitative finance with a focus on commodities markets.
 
+FsLab scripts
+-----------------
+
+* [Index] (https://xqguo.github.io/src/output/)
+
 Programming setup
 ----------
 
@@ -39,8 +44,3 @@ Understand the Quantitative finance
 * Notes for [Intro to Derivative Pricing](https://xqguo.github.io/intro.pdf) and [source](https://xqguo.github.io/intro.tex)
 * Swap price
 * Asian option
-
-FsLab scripts
------------------
-
-* [Index] (https://xqguo.github.io/src/output/)
