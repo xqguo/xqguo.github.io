@@ -29,6 +29,7 @@ localpackages/
 paket-files
 *.orig
 .paket
+!.paket/paket.bootstrapper.exe
 .fake
 
 #graph
