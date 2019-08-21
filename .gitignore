@@ -9,7 +9,6 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-output
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -32,5 +31,5 @@ paket-files
 !.paket/paket.bootstrapper.exe
 .fake
 
-#graph
-*.dg
+#build output
+src/output

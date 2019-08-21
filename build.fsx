@@ -4,8 +4,9 @@
 #I "../../packages/FAKE/tools"
 #r "FakeLib"
 open Fake
+open System.IO
 
-let scriptDir =  __SOURCE_DIRECTORY__
+let scriptDir =  Path.Combine( __SOURCE_DIRECTORY__ , "src" )
 
 let exec exe args workingDir = 
   printfn "%s %s (in %s)" exe args workingDir

@@ -31,10 +31,10 @@ stages:
         - task: PaketRestore@0
           inputs:
             PaketPath: '.paket'
-        - script: build.cmd html                 
+        - script: .\build.cmd html                 
         - task: CopyFiles@2
           inputs:
-            SourceFolder: '$(Build.SourcesDirectory)/output'
+            SourceFolder: '$(Build.SourcesDirectory)/src/output'
             Contents: '**'
             TargetFolder: '$(Build.SourcesDirectory)'
             OverWrite: true

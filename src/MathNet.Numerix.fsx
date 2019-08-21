@@ -1,6 +1,6 @@
 (*** hide ***)
-#load "packages/FsLab/Themes/DefaultWhite.fsx"
-#load "packages/FsLab/FsLab.fsx"
+#load "../packages/FsLab/Themes/DefaultWhite.fsx"
+#load "../packages/FsLab/FsLab.fsx"
 (**
 
 
@@ -12,7 +12,7 @@ It is a library for numerical computation. We can use it for LinearAlgebra, Stat
 Simulate correlated GBM are useful for Monte Carlo methods used option pricing and PFE etc. 
 -----------
 *)
-#I ".paket/load/"
+#I "../.paket/load/"
 #load "MathNet.Numerics.FSharp.fsx"
 open MathNet.Numerics.LinearAlgebra
 open MathNet.Numerics.Statistics

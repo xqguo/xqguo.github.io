@@ -7,7 +7,7 @@ open System.IO
 open System.Runtime
 open System.Diagnostics
 
-let scriptDir = __SOURCE_DIRECTORY__
+let scriptDir =  Path.Combine( __SOURCE_DIRECTORY__ , "src" )
 
 let exec fail shell exe args workingDir =
     printfn "%s %s (in %s)" exe args workingDir

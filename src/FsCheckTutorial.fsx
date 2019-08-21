@@ -1,6 +1,6 @@
 (*** hide ***)
-#load "packages/FsLab/Themes/DefaultWhite.fsx"
-#load "packages/FsLab/FsLab.fsx"
+#load "../packages/FsLab/Themes/DefaultWhite.fsx"
+#load "../packages/FsLab/FsLab.fsx"
 (**
 
 Testing code with FsCheck
@@ -18,7 +18,7 @@ that test only the necessary range, as shown in the following code.
 The test would often fail as we are testing for a smaller range.
 *)
 
-#I ".paket/load/"
+#I "../.paket/load/"
 #load "FsCheck.fsx"
 open FsCheck
 ///int arb filtered with range 
