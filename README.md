@@ -6,7 +6,7 @@ This project use FsLab template to document various topics related to quantitati
 FsLab scripts
 -----------------
 
-* [Index] (https://xqguo.github.io/src/output/)
+* [Index](https://xqguo.github.io/src/output/)
 
 Programming setup
 ----------
