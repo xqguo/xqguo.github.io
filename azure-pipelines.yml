@@ -28,6 +28,9 @@ stages:
               git status
               git checkout master
             workingDirectory: '$(Build.SourcesDirectory)'    
+        - task: PaketRestore@0
+          inputs:
+            PaketPath: '.paket'
         - script: build.cmd html                 
         - task: CopyFiles@2
           inputs:
