@@ -7,7 +7,7 @@ Programming setup
 ----------
 
 * Learn FSharp basics.
-
+  * [F# for fun and profit](https://fsharpforfunandprofit.com): a very good site to learn F#.
 
 * Get a free environment
   * [Azure notebook](https://notebooks.azure.com)
