@@ -30,6 +30,3 @@ paket-files
 .paket
 !.paket/paket.bootstrapper.exe
 .fake
-
-#build output
-src/output
