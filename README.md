@@ -36,6 +36,11 @@ Understand the markets
 Understand the Quantitative finance
 ------------------
 
-* Notes for [Intro to Derivative Pricing](https://xqguo.github.io/intro.pdf) and [source](https://xqguo.github.io/intro.txt)
+* Notes for [Intro to Derivative Pricing](https://xqguo.github.io/intro.pdf) and [source](https://xqguo.github.io/intro.tex)
 * Swap price
 * Asian option
+
+FsLab scripts
+-----------------
+
+* [Index] (https://xqguo.github.io/src/output/)
