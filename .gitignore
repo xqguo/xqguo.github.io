@@ -28,7 +28,7 @@ release.sh
 localpackages/
 paket-files
 *.orig
-.paket/load
+.paket
 .fake
 
 #graph
