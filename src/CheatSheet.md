@@ -77,6 +77,7 @@ Some references for tools
 dotnet restore
 dotnet build -c Release
 dotnet vstest Test.dll #run test on a prebuilt test dll
+dotnet test --filter DisplayName~getPrice #run XunitTest with a filter
 dotnet publish
 ```
 
