@@ -154,10 +154,12 @@ git push --force
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
+<span class="l">5: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip"><code lang="console">dotnet restore
 dotnet build -c Release
 dotnet vstest Test.dll #run test on a prebuilt test dll
+dotnet test --filter DisplayName~getPrice #run XunitTest with a filter
 dotnet publish
 </code></pre></td></tr></table>
 <ul>
