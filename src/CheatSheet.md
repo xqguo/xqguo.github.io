@@ -86,16 +86,16 @@ dotnet publish
 ## PowerShell
 
 - add user path entry and remove duplicates
-  adapted from [this post](https://itluke.online/2018/07/16/how-to-remove-duplicates-from-your-path-environment-variable-with-powershell/)  
+  adapted from [this post](https://itluke.online/2018/07/16/how-to-remove-duplicates-from-your-path-environment-variable-with-powershell/).  
 
-  ```bash
-  $CurrentPath = [Environment]::GetEnvironmentVariable('Path','User')
-  $TargetPath = $CurrentPath+";path1"
-  $SplittedPath = $TargetPath -split ';'
-  $CleanedPath = $SplittedPath | Sort-Object -Unique
-  $NewPath = $CleanedPath -join ';'
-  [Environment]::SetEnvironmentVariable('Path', $NewPath,'User')
-  ```
+```console
+$CurrentPath = [Environment]::GetEnvironmentVariable('Path','User')
+$TargetPath = $CurrentPath+";path1"
+$SplittedPath = $TargetPath -split ';'
+$CleanedPath = $SplittedPath | Sort-Object -Unique
+$NewPath = $CleanedPath -join ';'
+[Environment]::SetEnvironmentVariable('Path', $NewPath,'User')
+```
 
 ## WSL
 
