@@ -137,3 +137,11 @@ gpg --edit-key my_id
 ```console
 pass some_entry | clip.exe
 ```
+
+## [wget](https://www.gnu.org/software/wget/manual/wget.html)
+
+- download all jpg files from a reference page
+
+```console
+wget -r -A .jpy url
+```
