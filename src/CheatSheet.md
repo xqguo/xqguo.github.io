@@ -26,7 +26,7 @@ Some references for tools
   ```
 
 ## Git
-
+- [Gitlab git cheat sheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 - Use submoduels to have nested git repositories. [ref](https://www.vogella.com/tutorials/GitSubmodules/article.html)
 
     ```console
