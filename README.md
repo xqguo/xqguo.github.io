@@ -1,6 +1,8 @@
 Project outline
 ========================
 
+![](taiji.jpg)
+
 This project use FsLab template to document various topics related to quantitative finance with a focus on commodities markets.
 
 FsLab scripts
