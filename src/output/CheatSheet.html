@@ -213,16 +213,39 @@ certmgr -ssl https://github.com
 <td class="snippet"><pre class="fssnip"><code lang="bash">grep -rl PATTERN  . | xargs ls -l
 </code></pre></td></tr></table>
 <h2><a href="https://www.gnupg.org/">GPG</a></h2>
-<ul>
-<li>and trust ultimate key</li>
-</ul>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
+<p><a href="https://guides.library.illinois.edu/data_encryption/gpgcheatsheet">A useful cheat sheet</a></p>
+<p>Selected common comands:</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="bash">gpg --allow-secret-key-import --import secret.asc
-gpg --edit-key my_id
-#Then enter command trust, 5
+<td class="snippet"><pre class="fssnip"><code lang="console">gpg --list-secret-keys 
+#export private and public key
+gpg --export-secret-keys -a $ID &gt; my-private-key.asc
+gpg --armor --output public-key.gpg --export user@example.com
+gpg --import private_or_pub_key.asc
+gpg --delete-key 
+gpg --delete-secret-key
+#extend expiry requires secret key
+gpg --edit-key $id
+gpg&gt; expire
+gpg&gt; save
+#trust imported secret key
+gpg&gt; trust 
+#encrypt file
+gpg -ers $id file
 </code></pre></td></tr></table>
 <h2><a href="https://www.passwordstore.org/">Pass</a></h2>
 <ul>
