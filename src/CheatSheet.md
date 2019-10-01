@@ -122,13 +122,28 @@ grep -rl PATTERN  . | xargs ls -l
 
 ## [GPG](https://www.gnupg.org/)
 
-- and trust ultimate key
+[A useful cheat sheet](https://guides.library.illinois.edu/data_encryption/gpgcheatsheet)
 
-```bash
-gpg --allow-secret-key-import --import secret.asc
-gpg --edit-key my_id
-#Then enter command trust, 5
+Selected common comands:
+
+```console
+gpg --list-secret-keys 
+#export private and public key
+gpg --export-secret-keys -a $ID > my-private-key.asc
+gpg --armor --output public-key.gpg --export user@example.com
+gpg --import private_or_pub_key.asc
+gpg --delete-key 
+gpg --delete-secret-key
+#extend expiry requires secret key
+gpg --edit-key $id
+gpg> expire
+gpg> save
+#trust imported secret key
+gpg> trust 
+#encrypt file
+gpg -ers $id file
 ```
+
 
 ## [Pass](https://www.passwordstore.org/)
 
