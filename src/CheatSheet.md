@@ -29,35 +29,40 @@ Some references for tools
 - [Gitlab git cheat sheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 - Use submoduels to have nested git repositories. [ref](https://www.vogella.com/tutorials/GitSubmodules/article.html)
 
-    ```console
-    git clone --recursive [URL to Git repo]
-    git submodule update --init
-    # if there are nested submodules:
-    git submodule update --init --recursive
-    # pull all changes in the repo including changes in the submodules
-    git pull --recurse-submodules
-
-    # pull all changes for the submodules
-    git submodule update --remote
-    ```
+ ```console
+git clone --recursive [URL to Git repo]
+git submodule update --init
+# if there are nested submodules:
+git submodule update --init --recursive
+# pull all changes in the repo including changes in the submodules
+git pull --recurse-submodules
+# pull all changes for the submodules
+git submodule update --remote
+```
 
 - Create a clean git history [ref](https://tecadmin.net/delete-commit-history-in-github/)
 
-    ```console
-    git checkout --orphan temp_branch
-    git add -A
-    git commit -am "the first commit"
-    git branch -D master
-    git branch -m master
-    git push -f origin master
-    ```
+```console
+git checkout --orphan temp_branch
+git add -A
+git commit -am "the first commit"
+git branch -D master
+git branch -m master
+git push -f origin master
+```
 
 - Or Simply rebase the whole thing
 
-    ```console
-    git rebase -i --root
-    git push --force
-    ```
+```console
+git rebase -i --root
+git push --force
+```
+
+- diff local master with remote
+
+```console
+git diff master origin/master
+``` 
 
 ## [Paket](https://fsprojects.github.io/Paket/)
 
