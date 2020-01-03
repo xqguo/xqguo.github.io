@@ -1,6 +1,6 @@
-![](taiji.jpg)
-
 # 晓强空间
+
+![](taiji.jpg)
 
 个人兴趣爱好
 * [Quantitaive Finance in Commodities](CommodQuant)
