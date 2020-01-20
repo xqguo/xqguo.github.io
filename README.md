@@ -4,5 +4,5 @@
 
 个人兴趣爱好
 * [Quantitaive Finance in Commodities](CommodQuant)
-* [书画历程](art)
+* [书画历程](art.md)
 * [口头禅](notes.md)
