@@ -2,6 +2,10 @@
  
 ## 2019
 
+1. [心经 2020.1.13](https://drive.google.com/file/d/1sIdMKIg1f-5Pki_IrQlwZGZ7voZUfidQ/view?usp=sharing) 
+
+1. [净土发愿文 2020.1.14 ](https://drive.google.com/open?id=1sCDyPM3e4Q5w9qPslwfrn7HefKon2be7)
+
 1. [山2019.12.22](https://drive.google.com/open?id=1TnP39L8vFRVTAPvk8YweXdJseU6x7Td9)
 
 1. [重阳节诗二首2019.10.07](https://drive.google.com/open?id=10X1Ec2BUQIL6qu9VVnVpJdexuFAVoYbU)
