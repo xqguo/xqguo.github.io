@@ -2,7 +2,7 @@
  
 ## 2020
 
-1. [臨石濤竹杖芒鞋圖 2020.9](https://photos.app.goo.gl/dTFnuS1eEVDNo29e7)
+1. ![臨石濤竹杖芒鞋圖 2020.9](https://photos.app.goo.gl/dTFnuS1eEVDNo29e7)
 
 1. [山水 2020.3.8](https://photos.app.goo.gl/343eEY37JqwHwpnU6)
 
