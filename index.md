@@ -1,6 +1,3 @@
----
-layout: default
----
 # 晓强空间
 
 ![](taiji.jpg)
@@ -9,8 +6,6 @@ layout: default
 * [Quantitaive Finance in Commodities](https://xqguo.github.io/CommodQuant/index.html)
 * [书画历程](art.md)
 * [口头禅](notes.md)
-
-
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
@@ -25,3 +20,12 @@ layout: default
     </article>
   {% endfor %}
 </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179520494-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-179520494-1');
+</script>
