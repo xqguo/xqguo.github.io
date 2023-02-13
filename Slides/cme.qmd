@@ -1,0 +1,175 @@
+---
+title: Options
+format: 
+  revealjs: 
+    theme: serif
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    slide-number: true
+    chalkboard: true
+---
+
+# Definition
+
+Options are financial derivatives that give the buyer the right, but not the obligation, to buy or sell an underlying asset at a specified price on or before a specified date. 
+
+## Types of Options
+
+- Underlying type: futures options, futures spread options, equity options, fx options, interest rate options
+
+- Payout Type: call, put, exotic
+
+- Settlement Type: cash settled, delivery
+
+- Exercise Time: European, American, Bermudan 
+
+# Pricing
+
+## Option Specs
+
+In order to understand options pricing, we need to look at the following factors:
+
+1. Strike price
+    - The specified price at which the underlying asset can be bought or sold
+
+2. Time to expiration
+    - The amount of time remaining until the option expires
+
+## Market data
+
+1. Price of the underlying asset
+
+2. Volatility of the underlying asset
+    - How much the price of the underlying asset is expected to fluctuate
+
+These factors are used to calculate the theoretical value of an option using a mathematical model such as the Black-Scholes model. However, the actual price of an option may also be influenced by supply and demand in the market.
+
+## Greeks
+
+::: {.incremental}
+
+- Delta: measures the sensitivity of an option's price to changes in the underlying asset's *price*. 
+
+- Gamma: measures the rate of change in an option's *delta*. 
+
+- Vega: measures the sensitivity of an option's price to changes in the *volatility* of the underlying asset. 
+
+- Theta: measures the sensitivity of an option's price to the passage of *time*. 
+
+- Rho: measures the sensitivity of an option's price to changes in the *interest* rate. 
+
+::: 
+
+## WTI Option
+
+- WTI (West Texas Intermediate, a US light sweet crude oil blend) futures provide direct crude oil exposure
+
+- Hedge against adverse oil price moves or speculate
+
+- Price discovery 
+
+- American style call/put
+
+::: footer
+Source [CME WTI Option Specs ](https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.options.html)
+:::
+
+## Live Calculator
+
+![](option calc.png)
+
+::: footer
+Source [CME](https://www.cmegroup.com/tools-information/quikstrike/options-calculator.html)
+:::
+
+# Strategies
+
+## Benefits 
+
+- Payoff asymmetry: limited loss from long options 
+ 
+- Leverage: option premium is a fraction of underlying asset price
+
+- Express view of any market condition: bull, bear, range bounding
+
+## Risks
+
+- Unlimited loss
+
+- Margin calls
+
+- Complexity
+
+## Common Strategies
+
+- covered calls 
+
+- call spreads
+
+- straddle/strangle 
+
+## Covered call example
+
+![](wti covercall.png)
+
+::: footer
+Source [CME](https://www.cmegroup.com/tools-information/quikstrike/strategy-simulator.html)
+:::
+
+# Trading
+
+## Market mechanism
+
+   - Market Participants 
+
+   - Margin Requirements
+
+   - Exercising / Assignments 
+
+## Open Interest
+
+![](wti oi.png)
+
+::: footer
+Source [CME](https://www.cmegroup.com/tools-information/quikstrike/options-open-interest-profile.html)
+:::
+
+## Commitments of Traders Report
+
+![](wti cot.png)
+
+::: footer
+Source [CME](https://www.cmegroup.com/tools-information/quikstrike/commitment-of-traders.html),
+[CFTC](https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm)
+:::
+
+## 
+
+::: footer
+Source <https://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf>
+::: 
+
+Producer/Merchant/Processor/User  
+: A “producer/merchant/processor/user” is an entity that predominantly engages in the production, processing, packing or handling of a physical commodity and uses the futures markets to manage or hedge risks associated with those activities. 
+
+## 
+
+Swap Dealer 
+: A “swap dealer” is an entity that deals primarily in swaps for a commodity and uses the futures markets to manage or hedge the risk associated with those swaps transactions.  The swap dealer’s counterparties may be speculative traders, like hedge funds, or traditional commercial clients that are managing risk arising from their dealings in the physical commodity.  
+
+::: footer
+Source <https://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf>
+::: 
+
+## 
+
+Money Manager 
+: A “money manager,” for the purpose of this report, is a registered commodity trading advisor (CTA); a registered commodity pool operator (CPO); or an unregistered fund identified by CFTC.7 These traders are engaged in managing and conducting organized futures trading on behalf of clients.
+
+::: footer
+Source <https://www.cftc.gov/idc/groups/public/@commitmentsoftraders/documents/file/tfmexplanatorynotes.pdf>
+::: 
+
+
+# Conclusion
+
