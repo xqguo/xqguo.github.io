@@ -5,8 +5,7 @@
 ### 个人兴趣爱好
 * [Quantitaive Finance in Commodities](https://xqguo.github.io/CommodQuant/index.html)
 * [Energy and ags options presentation](https://xqguo.github.io/Slides/index.html).
-* [Python charts presentation](https://xqguo.github.io/charting/index.html)
-* 
+* [Python charts presentation](https://xqguo.github.io/charting/index.html).
 * [书画历程](art.md)
 * [口头禅](notes.md)
 <div class="posts">
