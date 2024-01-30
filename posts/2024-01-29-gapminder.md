@@ -12,4 +12,4 @@ I struggled a bit on the animation part, so just left the result as a manual sli
 
 The source code is here [source](https://github.com/xqguo/Gapminder)
 
-The chart can be viewed [here](/Gapminder.html)
+The chart can be viewed [here](/gapminder.html)
