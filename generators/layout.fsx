@@ -72,6 +72,8 @@ let layout (ctx : SiteContents) active bodyCnt =
                 // ]
               ]
               // div [Id "navbarMenu"; Class "navbar-menu"] menuEntries
+              script [ Async true; Src "https://cse.google.com/cse.js?cx=c7bf194decda14529" ] [] 
+              div [Class "gcse-search"] []
             ]
           ]
           yield! bodyCnt
