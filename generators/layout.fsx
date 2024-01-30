@@ -31,7 +31,7 @@ let injectWebsocketCode (webpage:string) =
     webpage.Insert ( (index + head.Length + 1),websocketScript)
 
 let layout (ctx : SiteContents) active bodyCnt =
-    let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
+    // let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
     let ttl =
       siteInfo
