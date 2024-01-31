@@ -30,15 +30,9 @@ let injectWebsocketCode (webpage:string) =
     let index = webpage.IndexOf head
     webpage.Insert ( (index + head.Length + 1),websocketScript)
 
-let mobileMenu (webpage:string) =
-    let websocketScript =
-        """
-        <script type="text/javascript">
-      </script>
-        """
-    let head = "<head>"
-    let index = webpage.IndexOf head
-    webpage.Insert ( (index + head.Length + 1),websocketScript)
+
+let getFilenameForTag tag =
+        sprintf "posts/tags/%s.html" tag
 
 let layout (ctx : SiteContents) active bodyCnt =
     let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
@@ -54,6 +48,7 @@ let layout (ctx : SiteContents) active bodyCnt =
         let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
         a [Class cls; Href p.link] [!! p.title ])
       |> Seq.toList
+
 
     html [] [
         head [] [
@@ -104,6 +99,10 @@ let published (post: Postloader.Post) =
 
 let postLayout (useSummary: bool) (post: Postloader.Post) =
     let hasSummary = post.summary.Length < post.content.Length
+    let tags=
+      post.tags
+      |> List.map (fun tag->
+        a [Href $"/posts/tags/{tag}.html" ] [!! tag ])
     div [Class "card article"] [
         div [Class "card-content"] [
             div [Class "media-content has-text-centered"] [
@@ -116,6 +115,11 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
             div [Class "content article-body"] [
                 !! (if useSummary then post.summary else post.content)
                 (if useSummary && hasSummary then a [ Href post.link] [!! "More ... "] else !! "")
+
+            ]
+            div [] [
+              !! "Tags: " 
+              div [] tags
             ]
         ]
     ]
