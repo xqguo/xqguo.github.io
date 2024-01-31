@@ -30,20 +30,30 @@ let injectWebsocketCode (webpage:string) =
     let index = webpage.IndexOf head
     webpage.Insert ( (index + head.Length + 1),websocketScript)
 
+let mobileMenu (webpage:string) =
+    let websocketScript =
+        """
+        <script type="text/javascript">
+      </script>
+        """
+    let head = "<head>"
+    let index = webpage.IndexOf head
+    webpage.Insert ( (index + head.Length + 1),websocketScript)
+
 let layout (ctx : SiteContents) active bodyCnt =
-    // let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
+    let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
     let ttl =
       siteInfo
       |> Option.map (fun si -> si.title)
       |> Option.defaultValue ""
 
-    // let menuEntries =
-    //   pages
-    //   |> Seq.map (fun p ->
-    //     let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
-    //     a [Class cls; Href p.link] [!! p.title ])
-    //   |> Seq.toList
+    let menuEntries =
+      pages
+      |> Seq.map (fun p ->
+        let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
+        a [Class cls; Href p.link] [!! p.title ])
+      |> Seq.toList
 
     html [] [
         head [] [
@@ -62,20 +72,21 @@ let layout (ctx : SiteContents) active bodyCnt =
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [ !! "Home" ]
-                a [Class "navbar-item"; Href "/about.html"] [ !! "About" ]
-                a [Class "navbar-item"; Href "/contact.html"] [ !! "Contact" ]
-                // span [Class "navbar-burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [//burgerEntries
+                // a [Class "navbar-item"; Href "/about.html"] [ !! "About" ]
+                // a [Class "navbar-item"; Href "/contact.html"] [ !! "Contact" ]
+                span [Class "navbar-burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [//burgerEntries
                 // span [Class "navbar-burger";] [
-                //   span [] []
-                //   span [] []
-                //   span [] []
-                // ]
+                  span [] []
+                  span [] []
+                  span [] []
+                ]
               ]
-              // div [Id "navbarMenu"; Class "navbar-menu"] menuEntries
+              div [Id "navbarMenu"; Class "navbar-menu"] menuEntries
               script [ Async true; Src "https://cse.google.com/cse.js?cx=c7bf194decda14529" ] [] 
               div [Class "gcse-search"] []
             ]
           ]
+          script [ Src "/js/mobile.js" ] [] 
           yield! bodyCnt
         ]
     ]
