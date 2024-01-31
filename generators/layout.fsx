@@ -103,6 +103,7 @@ let published (post: Postloader.Post) =
     |> fun n -> n.ToString("yyyy-MM-dd")
 
 let postLayout (useSummary: bool) (post: Postloader.Post) =
+    let hasSummary = post.summary.Length < post.content.Length
     div [Class "card article"] [
         div [Class "card-content"] [
             div [Class "media-content has-text-centered"] [
@@ -114,7 +115,7 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
             ]
             div [Class "content article-body"] [
                 !! (if useSummary then post.summary else post.content)
-
+                (if useSummary && hasSummary then a [ Href post.link] [!! "More ... "] else !! "")
             ]
         ]
     ]
