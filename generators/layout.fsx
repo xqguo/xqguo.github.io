@@ -63,7 +63,7 @@ let layout (ctx : SiteContents) active bodyCnt =
 
         ]
         body [] [
-          nav [Class "navbar"] [
+          nav [Class "navbar is-light"] [
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [ !! "Home" ]
