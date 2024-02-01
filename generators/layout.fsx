@@ -118,8 +118,9 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
 
             ]
             div [] [
-              !! "Tags: " 
-              div [] tags
+              // !! "Tags: " 
+              div [] (List.append [!! "Tags:"] tags)
             ]
         ]
     ]
+ 
