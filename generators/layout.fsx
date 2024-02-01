@@ -117,10 +117,9 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
                 (if useSummary && hasSummary then a [ Href post.link] [!! "More ... "] else !! "")
 
             ]
-            div [] [
-              // !! "Tags: " 
+            footer [Class "card-footer"] [
               div [] (List.append [!! "Tags:"] tags)
-            ]
+            ] 
         ]
     ]
  
