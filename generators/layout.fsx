@@ -63,7 +63,7 @@ let layout (ctx : SiteContents) active bodyCnt =
 
         ]
         body [] [
-          nav [Class "navbar"] [
+          nav [Class "navbar is-light"] [
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [ !! "Home" ]
@@ -117,9 +117,9 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
                 (if useSummary && hasSummary then a [ Href post.link] [!! "More ... "] else !! "")
 
             ]
-            div [] [
-              !! "Tags: " 
-              div [] tags
-            ]
+            footer [Class "card-footer"] [
+              div [] (List.append [!! "Tags:"] tags)
+            ] 
         ]
     ]
+ 
