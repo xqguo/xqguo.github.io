@@ -31,7 +31,8 @@ let isSeparator (input : string) =
 
 let isSummarySeparator (input: string) =
     input.Contains "<!--more-->"
-
+let isMDLoader (input: string) =
+    input.StartsWith "<!--input: "
 
 ///`fileContent` - content of page to parse. Usually whole content of `.md` file
 ///returns content of config that should be used for the page
@@ -59,8 +60,16 @@ let getContent (fileContent : string) =
     let fileContent = fileContent.Split '\n'
     let fileContent = fileContent |> Array.skip 1 //First line must be ---
     let indexOfSeperator = fileContent |> Array.findIndex isSeparator
-    let _, content = fileContent |> Array.splitAt indexOfSeperator
+    let _, content' = fileContent |> Array.splitAt indexOfSeperator
 
+    //now pull input files into content.
+    let content =  
+        content' 
+        |> Array.mapi( fun i l ->             
+            if isMDLoader l then
+                File.ReadAllText (l.[10 .. l.Length-4 ].Trim()) 
+            else l)
+                        
     let summary, content =
         match content |> Array.tryFindIndex isSummarySeparator with
         | Some indexOfSummary ->
