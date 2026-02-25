@@ -45,3 +45,5 @@ let config = {
         {Script = "contact.fsx"; Trigger = Once; OutputFile = NewFileName "contact.html" }
     ]
 }
+
+let outputFolder = "docs"
