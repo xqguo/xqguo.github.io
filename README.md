@@ -17,6 +17,6 @@ Run the following command in the root directory:
 fornax.exe build
 ```
 
-This will generate the site under the `_public` folder, rename it to `docs/` folder before publish.
+This will generate the site under the `_public` folder, which is linked to Github pages site.
 
 Enjoy!
