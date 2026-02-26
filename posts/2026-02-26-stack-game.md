@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Snake — Interactive Game
+title: 垒石头
 author: xq
 tags: game, interactive
 ---
