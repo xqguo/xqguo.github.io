@@ -120,7 +120,7 @@ else
 
         // Read, Process Images, and Write
         let originalContent = File.ReadAllText(sourceFile)
-        let paddedContent = originalContent |> addheaders noteName
+        let paddedContent = originalContent |> addheaders fn 
         let finalContent = processImages paddedContent
         File.WriteAllText(destFile, finalContent)
 
