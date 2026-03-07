@@ -132,5 +132,6 @@ else
         if execute "fornax" "build" repoPath = 0 then
             execute "git" "add ." repoPath |> ignore
             execute "git" ($"commit -m \"Publish: {noteName}\"") repoPath |> ignore
-            execute "git" "push origin main" repoPath |> ignore
+            //do a manual push for now, control the impact local in case of any issue.
+            // execute "git" "push origin main" repoPath |> ignore
             printfn "✨ Done!"
