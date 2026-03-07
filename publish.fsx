@@ -74,15 +74,31 @@ let processImages (content: string) =
 
 //need a function to add pre matters
 let addheaders title content =
+    
+
+    let tags = 
+        let words = 
+            Regex.Split(title + " " + content, @"[^\w]+")
+            |> Array.filter (fun w -> w.Length >= 2 && w.Length < 10 ) // Filter out very short and very long words
+            |> Array.distinctBy (fun w -> w.ToLower())
+        if words.Length = 0 then
+            ""
+        else
+            words
+            |> Array.take (Math.Min(5, words.Length))
+            |> String.concat ", "
+    
     let date = DateTime.Now.ToString("yyyy-MM-dd")
     let headers = $"""---
 layout: post
 title: {title}
 author: xq
 published: {date}
+tags: {tags}
 ---
 
 """
+
     headers + content
 
 

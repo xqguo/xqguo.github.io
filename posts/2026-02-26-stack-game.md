@@ -3,6 +3,7 @@ layout: post
 title: 垒石头
 author: xq
 tags: game, interactive
+published: 2026-02-26
 ---
 
 来玩一个小型的垒石头游戏。
