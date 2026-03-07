@@ -2,7 +2,7 @@
 layout: post
 title: 垒石头
 author: xq
-tags: game, interactive
+tags: game, interactive, 游戏, 互动, 小游戏
 published: 2026-02-26
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Gapminder
 published: 2024-01-29
-tags: fsharp, plotly
+tags: fsharp, plotly, 数据可视化, 编程, F#
 ---
 
 [Gapminder](https://www.gapminder.org/) is a good topic covering world development, data analytics with good insights.
