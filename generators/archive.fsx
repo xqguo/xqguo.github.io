@@ -59,7 +59,7 @@ let generate' (ctx : SiteContents) (_: string) =
                 for (year, month), _ in monthPosts do
                   let monthName = DateTime(year, month, 1).ToString("MMMM yyyy")
                   li [] [
-                    a [Href (Layout.getFilenameForArchive (year, month))] [!! monthName]
+                    a [Href (Layout.getLinkForArchive (year, month))] [!! monthName]
                   ]
               ]
             ]

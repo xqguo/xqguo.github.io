@@ -34,8 +34,14 @@ let injectWebsocketCode (webpage:string) =
 let getFilenameForTag tag =
         sprintf "posts/tags/%s.html" tag
 
+let getLinkForTag tag =
+        sprintf "/posts/tags/%s.html" tag
+
 let getFilenameForArchive (year, month) =
         sprintf "posts/archive/%i-%02i.html" year month
+
+let getLinkForArchive (year, month) =
+        sprintf "/posts/archive/%i-%02i.html" year month
 
 let layout (ctx : SiteContents) active bodyCnt =
     let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
@@ -103,7 +109,7 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
     let tags=
       post.tags
       |> List.map (fun tag->
-        a [Href $"/posts/tags/{tag}.html" ] [!! tag ])
+        a [Href (getLinkForTag tag) ] [!! tag ])
     div [Class "card article"] [
         div [Class "card-content"] [
             div [Class "media-content has-text-centered"] [

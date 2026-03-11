@@ -113,7 +113,7 @@ let loadFile (rootDir: string) (n: string) =
         let tagsOpt =
             config
             |> Map.tryFind "tags"
-            |> Option.map (trimString >> fun n -> n.Split ',' |> Array.toList)
+            |> Option.map (trimString >> fun n -> n.Split ',' |> Array.toList |> List.map (fun t -> t.Trim()))
         defaultArg tagsOpt []
 
     { file = file

@@ -64,7 +64,7 @@ let generate' (ctx : SiteContents) (_: string) =
               ul [] [
                 for tag in tags do
                   li [] [
-                    a [Href (Layout.getFilenameForTag tag)] [!! tag]
+                    a [Href (Layout.getLinkForTag tag)] [!! tag]
                   ]
               ]
             ]
