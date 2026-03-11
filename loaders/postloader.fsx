@@ -37,7 +37,7 @@ let isMDLoader (input: string) =
 ///`fileContent` - content of page to parse. Usually whole content of `.md` file
 ///returns content of config that should be used for the page
 let getConfig (fileContent : string) =
-    let fileContent = fileContent.Split '\n'
+    let fileContent = fileContent.Split '\n' |> Array.map (fun l -> l.TrimEnd('\r'))
     let fileContent = fileContent |> Array.skip 1 //First line must be ---
     let indexOfSeperator = fileContent |> Array.findIndex isSeparator
     let splitKey (line: string) =
@@ -57,7 +57,7 @@ let getConfig (fileContent : string) =
 ///`fileContent` - content of page to parse. Usually whole content of `.md` file
 ///returns HTML version of content of the page
 let getContent (fileContent : string) =
-    let fileContent = fileContent.Split '\n'
+    let fileContent = fileContent.Split '\n' |> Array.map (fun l -> l.TrimEnd('\r'))
     let fileContent = fileContent |> Array.skip 1 //First line must be ---
     let indexOfSeperator = fileContent |> Array.findIndex isSeparator
     let _, content' = fileContent |> Array.splitAt indexOfSeperator

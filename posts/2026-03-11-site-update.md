@@ -20,3 +20,4 @@ Today I've added several new features to the blog to make it easier to browse an
 - **Tag Trimming**: Leading spaces in tags are now automatically handled, ensuring clean URLs and correctly grouped tags.
 
 Check out the new browsing options in the menu above!
+
