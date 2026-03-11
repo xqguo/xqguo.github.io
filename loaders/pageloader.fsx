@@ -10,5 +10,7 @@ let loader (projectRoot: string) (siteContent: SiteContents) =
     // siteContent.Add({title = "Gapminder"; link = "/gapminder.html"})
     siteContent.Add({title = "About"; link = "/about.html"})
     siteContent.Add({title = "Contact"; link = "/contact.html"})
+    siteContent.Add({title = "Archives"; link = "/posts/archive/index.html"})
+    siteContent.Add({title = "Tags"; link = "/posts/tags/index.html"})
 
     siteContent

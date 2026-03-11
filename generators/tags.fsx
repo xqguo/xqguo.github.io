@@ -48,11 +48,37 @@ let generate' (ctx : SiteContents) (_: string) =
         ]
       ]]
 
-  psts
+  let tagIndex =
+    Layout.layout ctx "Tags" [
+      section [Class "hero is-info is-medium is-bold"] [
+        div [Class "hero-body"] [
+          div [Class "container has-text-centered"] [
+            h1 [Class "title"] [!! "Tags"]
+          ]
+        ]
+      ]
+      div [Class "container"] [
+        section [Class "section"] [
+          div [Class "column is-8 is-offset-2"] [
+            div [Class "content"] [
+              ul [] [
+                for tag in tags do
+                  li [] [
+                    a [Href (Layout.getFilenameForTag tag)] [!! tag]
+                  ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+
+  ("posts/tags/index.html", tagIndex |> Layout.render ctx) ::
+  (psts
   |> List.map (fun (tag, psts) ->
         Layout.getFilenameForTag tag,
         layoutForPostSet  tag psts
-        |> Layout.render ctx)
+        |> Layout.render ctx))
 
 let generate (ctx : SiteContents) (projectRoot: string) (page: string) =
     generate' ctx page

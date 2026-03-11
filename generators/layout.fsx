@@ -34,6 +34,9 @@ let injectWebsocketCode (webpage:string) =
 let getFilenameForTag tag =
         sprintf "posts/tags/%s.html" tag
 
+let getFilenameForArchive (year, month) =
+        sprintf "posts/archive/%i-%02i.html" year month
+
 let layout (ctx : SiteContents) active bodyCnt =
     let pages = ctx.TryGetValues<Pageloader.Page> () |> Option.defaultValue Seq.empty
     let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
@@ -67,8 +70,6 @@ let layout (ctx : SiteContents) active bodyCnt =
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [ !! "Home" ]
-                // a [Class "navbar-item"; Href "/about.html"] [ !! "About" ]
-                // a [Class "navbar-item"; Href "/contact.html"] [ !! "Contact" ]
                 span [Class "navbar-burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [//burgerEntries
                 // span [Class "navbar-burger";] [
                   span [] []
